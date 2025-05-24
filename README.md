@@ -15,18 +15,22 @@ Install either [Fortress, Harmonic or Ionic](https://gazebosim.org/docs).
 
 To install Harmonic:
 
+```
 sudo apt update
 sudo apt install curl lsb-release gnupg
-
+```
+```
 sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
 sudo apt update
 sudo apt install gz-harmonic
-
+```
 Set the `GZ_VERSION` environment variable to the Gazebo version you'd
 like to compile against. For example:
 
+```
 export GZ_VERSION=harmonic # As we have decided to use harmonic
+```
 
 > You only need to set this variable when compiling, not when running.
 
